@@ -6,7 +6,7 @@
 
 <br>
 
-# Analise História Café
+# Analise História do Café Total (Arábica e Conilon)
 
 # Grupo 30
 
@@ -49,7 +49,7 @@ Este projeto tem como objetivo analisar a série histórica de produção de caf
 4. Normalização:
 
 - Aplicamos as regras de normalização (1FN, 2FN e 3FN) para refinar o modelo e eliminar redundâncias e anomalias.
-- O modelo foi dividido em três tabelas principais: regiao, estado e subregiao, com a tabela producao referenciando essas tabelas.
+- O modelo foi dividido em três tabelas principais: `regiao`, `estado` e `subregiao`, com a tabela `producao` referenciando essas tabelas.
 
 5. Modelo Lógico Relacional:
 
@@ -66,18 +66,20 @@ Este projeto tem como objetivo analisar a série histórica de produção de caf
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
-- **src**: pasta com o script python utilizando pandas para a limpeza dos dados.
+- **src**: Contém o script Python que utiliza a biblioteca Pandas para a limpeza e transformação dos dados.
+  - `data_cleaning.py` => Script para carregar, limpar e transformar os dados da planilha CSV.
 
-- **sql**: Scripts SQL
-  - `banco.sql` => criação do banco de dados e inserção das tabelas de regiões, estados e subregioes
-  - `inserts.sql` => dados de produção
-  - `queries.sql` => queries para analise de dados
+- **sql**: Scripts SQL para criação e manipulação do banco de dados.
+  - `banco.sql` => Script para criação do banco de dados e das tabelas de regiões, estados e sub-regiões.
+  - `inserts.sql` => Script para inserção dos dados de produção nas tabelas.
+  - `queries.sql` => Script com consultas SQL para análise dos dados.
 
 - **README.md**: Arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
-- **assets**: pasta com os assets, planilhas e dados utilizados nesse projeto
+- **assets**: Contém os assets, planilhas e dados utilizados neste projeto.
+  - `dados.csv` => Planilha CSV com os dados de produção de café.
 
-- **docs**: pasta com documentação da modelagem desse projeto.
+- **docs**: Documentação da modelagem do projeto.
 
 ## 🔧 Como Executar o Projeto
 
@@ -121,7 +123,7 @@ pip install pandas
 
 - Na pasta `src`, execute o script:
 ```
-python limpeza-dos-dados.py
+python data_cleaning.py
 ```
 
 ## Dicionário de Dados
